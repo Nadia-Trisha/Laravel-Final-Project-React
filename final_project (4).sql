@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2024 at 07:33 AM
+-- Generation Time: Feb 27, 2024 at 07:03 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -83,7 +83,8 @@ INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (2, 'Vanila Cake', '2024-02-25 03:21:47', '2024-02-25 03:21:47'),
 (3, 'Red Velbet', '2024-02-25 03:21:47', '2024-02-25 03:21:47'),
 (4, 'Marvel Cake', '2024-02-25 06:13:42', '2024-02-25 06:13:42'),
-(5, 'Carrot Cake', '2024-02-25 06:28:58', '2024-02-25 06:28:58');
+(5, 'Carrot Cake', '2024-02-25 06:28:58', '2024-02-25 06:28:58'),
+(7, 'Coconut Cake.', '2024-02-27 05:31:27', '2024-02-27 05:31:27');
 
 -- --------------------------------------------------------
 
@@ -108,7 +109,9 @@ CREATE TABLE `contacts` (
 
 INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `address`, `subject`, `created_at`, `updated_at`) VALUES
 (1, 'Mamunur', 'mamun@gmail.com', 1876543345, 'Vola', 'hello there is some', '2024-02-25 06:26:48', '2024-02-25 06:26:48'),
-(2, 'Nabila Naeem', 'nabila@gmail.com', 175674836, 'Demra', 'Hello ,I am Nabila. Want to know about your contact.', '2024-02-25 06:27:51', '2024-02-25 06:27:51');
+(2, 'Nabila Naeem', 'nabila@gmail.com', 175674836, 'Demra', 'Hello ,I am Nabila. Want to know about your contact.', '2024-02-25 06:27:51', '2024-02-25 06:27:51'),
+(3, 'Nazmun  Nahar', 'nazmun@gmail.com', 12345678, 'Sylhet', 'hello there is something important to share to you', '2024-02-27 05:20:24', '2024-02-27 05:20:24'),
+(4, 'Masum', 'masum@gmail.com', 175674836, 'vh', 'hgfhg', '2024-02-27 05:39:01', '2024-02-27 05:39:01');
 
 -- --------------------------------------------------------
 
@@ -132,7 +135,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'shikha', 'shikha@gmail.com', NULL, '$2y$12$4WPRuatDSs5u5/FAxjNPBOI7YkqIPwVheaARk1pV8tySywTY8vvB6', NULL, NULL, NULL);
+(1, 'shikha', 'shikha@gmail.com', NULL, '$2y$12$4WPRuatDSs5u5/FAxjNPBOI7YkqIPwVheaARk1pV8tySywTY8vvB6', NULL, NULL, NULL),
+(2, 'Rojoni', 'rojoni@gmail.com', NULL, '$2y$12$4WPRuatDSs5u5/FAxjNPBOI7YkqIPwVheaARk1pV8tySywTY8vvB6', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -170,8 +174,6 @@ CREATE TABLE `masterchief` (
 --
 
 INSERT INTO `masterchief` (`id`, `name`, `designation`, `image`, `created_at`, `updated_at`) VALUES
-(2, 'Trisha', 'senior chief', NULL, '2024-02-24 23:11:19', '2024-02-24 23:11:19'),
-(4, 'Nadia', 'senior chief', NULL, '2024-02-24 23:22:35', '2024-02-24 23:22:35'),
 (5, 'Alauddin', 'senior chief', '1708841177.jpg', '2024-02-25 00:06:17', '2024-02-25 00:06:17'),
 (6, 'Masum Hossain', 'senior chief', '1708841898.jpg', '2024-02-25 00:18:18', '2024-02-25 00:18:18'),
 (7, 'Najnin Zahan', 'junior chief', '1708841948.jpg', '2024-02-25 00:19:08', '2024-02-25 00:19:08');
@@ -236,7 +238,10 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`id`, `order_number`, `sub_total`, `total_amount`, `productName`, `quantity`, `customerName`, `email`, `phone`, `country`, `address`, `status`, `created_at`, `updated_at`) VALUES
 (1, 'ORD 2131', 1600, 1600, 'Red Velbet cake', 2, '1', 'shikha@gmail.com', '0175674836', 'Bangladesh', 'Dhaka', 1, '2024-02-24 22:14:11', '2024-02-25 00:31:32'),
 (2, 'ORD 2103', 2900, 2900, 'Vanila cake', 3, '1', 'shikha@gmail.com', '01876543345', 'Bangladesh', 'Chitagong', 0, '2024-02-24 22:32:55', '2024-02-24 22:32:55'),
-(3, 'ORD 2999', 1000, 1000, 'Chocolate cake', 1, '1', 'shikha@gmail.com', '01876543345', 'Bangladesh', 'Chitagong', 2, '2024-02-25 00:25:25', '2024-02-25 00:31:42');
+(3, 'ORD 2999', 1000, 1000, 'Chocolate cake', 1, '1', 'shikha@gmail.com', '01876543345', 'Bangladesh', 'Chitagong', 0, '2024-02-25 00:25:25', '2024-02-26 22:02:53'),
+(4, 'ORD 4044', 8300, 8300, 'Red Velbet cake', 9, '1', 'shikha@gmail.com', '0175674836', 'Bangladesh', 'Chitagong', 1, '2024-02-26 21:41:32', '2024-02-26 22:01:46'),
+(5, 'ORD 3729', 1000, 1000, 'Chocolate cake', 1, '2', 'rojoni@gmail.com', '01876543345', 'Bangladesh', 'Rajbari', 1, '2024-02-26 23:10:19', '2024-02-26 23:10:39'),
+(6, 'ORD 1161', 4700, 4700, 'Vanila cake', 5, '2', 'rojoni@gmail.com', '0175674836', 'Bangladesh', 'Chitagong', 2, '2024-02-26 23:37:27', '2024-02-26 23:38:13');
 
 -- --------------------------------------------------------
 
@@ -297,7 +302,8 @@ INSERT INTO `products` (`id`, `name`, `description`, `image`, `tags`, `price`, `
 (2, 'Vanila cake', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,', 'wedding1.jpg', NULL, 900.00, 2, 1, '2024-02-25 03:21:47', '2024-02-25 03:21:47'),
 (3, 'Red Velbet cake', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,', 'redvelbet.jpg', NULL, 800.00, 3, 1, '2024-02-25 03:21:47', '2024-02-25 03:21:47'),
 (5, 'Marvel Cake', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</p>', '1708836229.jpg', '[\"lether\"]', 3500.00, 2, 0, '2024-02-24 22:43:49', '2024-02-25 00:31:09'),
-(6, 'Chocolate cake', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</p>', '1708842610.jpg', '[\"full-sleeves\",\"half-sleeves\"]', 3500.00, 5, 1, '2024-02-25 00:30:10', '2024-02-25 00:30:31');
+(6, 'Carrot', '<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,</p>', '1708842610.jpg', '[\"full-sleeves\",\"half-sleeves\"]', 3500.00, 5, 1, '2024-02-25 00:30:10', '2024-02-26 21:38:11'),
+(8, 'Cake', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia', '1709011959.jpg', '[\"full-sleeves\",\"half-sleeves\",\"lether\"]', 564.00, 7, 1, '2024-02-26 23:32:39', '2024-02-26 23:32:39');
 
 -- --------------------------------------------------------
 
@@ -432,19 +438,19 @@ ALTER TABLE `brands`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -468,7 +474,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -480,7 +486,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`

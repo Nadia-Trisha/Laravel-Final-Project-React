@@ -40,7 +40,7 @@
                             <td>{{$order->productName}}</td>
                             <td>{{$order->quantity}}</td>                                    
                             <td>{{$order->total_amount}}</td>                                    
-                            <td>{{$order->customerName}}</td>                                    
+                            <td>{{$order->customers->name}}</td>                                    
                             <td>{{$order->phone}}</td>                                    
                             <td>{{$order->address}}</td>                                    
                             <td>{{$order->status}}</td>                                    

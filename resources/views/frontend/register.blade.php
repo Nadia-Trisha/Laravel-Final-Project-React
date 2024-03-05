@@ -9,7 +9,7 @@
             <div class="col-lg-7 text-center">
                 <div class="section-title position-relative text-center mx-auto mb-4 pb-3" style="max-width: 600px;">
                     
-                    <h1 class="display-4 text-uppercase text-white">Login Form</h1>
+                    <h1 class="display-4 text-uppercase text-white">Registration Form</h1>
                 </div>
                 <div class="card-body">
                     @if ($errors->any())
@@ -21,14 +21,24 @@
                         </ul>
                     </div>                       
                 @endif
-                <form method="POST" action="{{ route('customer.login') }}">
+                <form method="POST" action="{{ route('customer.store') }}">
                     @csrf
+                    <!-- Name input -->
+                    <div class="form-outline mb-4">
+                      <input type="text" name="name" id="form2Example1" class="form-control" placeholder="Full Name"/>
+                    </div>                    
+                    <!-- Phone input -->
+                    <div class="form-outline mb-4">
+                      <input type="text" name="phone" id="form2Example1" class="form-control" placeholder="Phone No"/>
+                    </div>                    
+                    <!-- Address input -->
+                    <div class="form-outline mb-4">
+                      <input type="text" name="address" id="form2Example1" class="form-control" placeholder="Full Address"/>
+                    </div>                   
                     <!-- Email input -->
                     <div class="form-outline mb-4">
                       <input type="email" name="email" id="form2Example1" class="form-control" placeholder="Email address"/>
-                      {{-- <label class="form-label" for="form2Example1">Email address</label> --}}
-                    </div>
-                  
+                    </div>          
                     <!-- Password input -->
                     <div class="form-outline mb-4">
                       <input type="password" name="password" id="form2Example2" class="form-control" placeholder="Password"/>
@@ -75,6 +85,7 @@
                       </button>
                     </div>
                   </form>
+                  
             </div>
         </div>
     </div>

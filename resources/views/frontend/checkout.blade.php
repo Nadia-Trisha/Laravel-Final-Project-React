@@ -20,7 +20,7 @@
                     <div class="col-sm-12">
                         <label>Name *</label>
                         <input type="text" class="form-control" name="customerName" value="{{ Auth::guard('customer')->user()->name }}">
-                        <input type="hidden" class="form-control" name="customerName" value="{{ Auth::guard('customer')->user()->id }}">
+                        <input type="text" class="form-control" name="customer_id" value="{{ Auth::guard('customer')->user()->id }}">
                     </div>
 
                 </div>

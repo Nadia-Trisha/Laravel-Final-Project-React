@@ -60,6 +60,7 @@
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">user</a>
               <div class="dropdown-menu">
                   <h5 >{{ Auth::guard('customer')->user()->name }}</h5>
+                  <a class="dropdown-item" href="{{ route('myorders') }}"><i class="fas fa-user mr-2"></i>My Orders</a>
                   <form method="POST" action="{{ route('customer.logout') }}">
                     @csrf
                     <button type="submit" class="btn btn-danger">
